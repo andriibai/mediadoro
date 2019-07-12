@@ -1,0 +1,19 @@
+/*Components*/
+@import 'components/variables';
+@import 'components/mixins';
+@import 'components/reset';
+@import 'components/fonts';
+@import 'components/tools';
+
+/*Libs*/
+@import 'libs/font-awesome';
+@import 'libs/mercury';
+
+/*Layout*/
+@import 'layout/header';
+@import 'layout/about';
+@import 'layout/services';
+@import 'layout/goals';
+@import 'layout/team';
+@import 'layout/contacts';
+@import 'layout/footer';

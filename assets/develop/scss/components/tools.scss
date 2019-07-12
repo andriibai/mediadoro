@@ -1,0 +1,69 @@
+html{
+  font-family: 'Open Sans', sans-serif;
+  background: $white;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+a{
+  text-decoration: none;
+}
+
+.wrapper{
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.wrapper{
+  @include md-min {
+    width: 750px;
+  }
+  @include lg-min{
+    width: 970px;
+  }
+  @include xl-min{
+    width: 1170px;
+  }
+}
+
+section{
+  padding: 85px 0;
+  position: relative;
+  @include respond(767){
+    padding: 70px 0;
+  }
+}
+
+span{
+  display: inline-block;
+}
+
+.btn {
+  font-size: 14px;
+  padding: 15px 30px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  color: #fff;
+  border: none;
+  transition: all .3s ease-in-out;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.title{
+  text-align: center;
+  color: #000;
+  padding-bottom: 40px;
+  text-transform: capitalize;
+  font-weight: 500;
+  font-size: 40px;
+  letter-spacing: 1px;
+  @include respond(767){
+    font-size: 30px;
+  }
+}
+

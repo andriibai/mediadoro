@@ -1,0 +1,91 @@
+.team{
+  padding: 85px 0 100px;
+  &__content{
+    @include flex();
+    align-items: center;
+    @include lg-max{
+      flex-direction: column;
+    }
+  }
+  &__info{
+    //padding: 40px 42px;
+    //background: #fff;
+    min-width: 310px;
+    box-shadow: 1px 1px 20px 4px hsla(0,0%,46%,.14);
+    margin-bottom: 20px;
+    transition: .5s;
+    &:hover{
+
+    }
+    //@include lg-max{
+    //}
+
+    img{
+      margin: 0 auto;
+    }
+  }
+
+  &__caption{
+    position: relative;
+    text-align: center;
+    letter-spacing: 1px;
+    padding: 17px 8px 25px;
+    background: #225ba5;
+  }
+  &__name{
+    font-size: 18px;
+    font-weight: 700;
+    color: $white;
+    &:after{
+      content: "";
+      position: relative;
+      display: block;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin: 10px auto 0;
+      width: 30%;
+      height: 1.2px;
+      background: $white;
+    }
+  }
+  &__position{
+    font-style: italic;
+    font-size: 16px;
+    margin-top: 10px;
+    color: $white;
+  }
+
+  &__title{
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  &__text{
+    font-size: 18px;
+    line-height: 27px;
+    margin-bottom: 20px;
+    color: #7e7e7e;
+  }
+
+
+  &__rectangle-right{
+    position: absolute;
+    width: 60%;
+    height: 150px;
+    background: url(../img/worn-dots.png);
+    background-size: auto;
+    z-index: -1;
+    right: 0;
+    bottom: 16%;
+  }
+  &__rectangle-left{
+    position: absolute;
+    width: 60%;
+    height: 246px;
+    background: url(../img/worn-dots.png);
+    background-size: auto;
+    z-index: -1;
+    left: 0;
+    bottom: 40%;
+  }
+}

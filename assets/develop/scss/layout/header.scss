@@ -1,0 +1,256 @@
+.header{
+  position: relative;
+  &__content{
+    top: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+    background: #fff;
+    transition: background 0.5s ease-in-out, height 0.5s ease-in-out;
+    &.js-fixed{
+      box-shadow: 0 0 7px 1px rgba(0,0,0,0.36);
+      .wrapper{
+        height: 70px;
+      }
+
+    }
+    .wrapper {
+      @include flex();
+      align-items: center;
+      height: 100px;
+      transition: background 0.5s ease-in-out, height 0.5s ease-in-out;
+      @include lg-max{
+        flex-direction: row-reverse;
+        height: 70px;
+      }
+    }
+    @include lg-max{
+      box-shadow: 0 0 7px 1px rgba(0,0,0,.36);
+      background-image: linear-gradient(140deg,#225ca7,#122a42);
+    }
+  }
+
+  &__logo{
+    img{
+      width: 230px;
+    }
+  }
+  &__overlay {
+    display: none;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 35;
+  }
+
+  .header__menu-mob{
+    display: none;
+    width: 32px;
+    height: 24px;
+    position: relative;
+    transform: rotate(0deg);
+    @include transition();
+    cursor: pointer;
+    span{
+      display: block;
+      position: absolute;
+      height: 4px;
+      width: 50%;
+      background: $white;
+      opacity: 1;
+      transform: rotate(0deg);
+      @include transition();
+
+      &:nth-child(even){
+        left: 50%;
+      }
+      &:nth-child(odd){
+        left: 0px;
+      }
+      &:nth-child(1),
+      &:nth-child(2){
+        top: 0px;
+      }
+      &:nth-child(3),
+      &:nth-child(4){
+        top: 9px;
+      }
+      &:nth-child(5),
+      &:nth-child(6){
+        top: 18px;
+      }
+    }
+    &.open{
+      span{
+        &:nth-child(1),
+        &:nth-child(6){
+          transform: rotate(45deg);
+        }
+        &:nth-child(2),
+        &:nth-child(5){
+          transform: rotate(-45deg);
+        }
+        &:nth-child(1){
+          left: 5px;
+          top: 7px;
+        }
+        &:nth-child(2){
+          left: calc(50% - 5px);
+          top: 7px;
+        }
+        &:nth-child(3){
+          left: -50%;
+          opacity: 0;
+        }
+        &:nth-child(4){
+          left: 100%;
+          opacity: 0;
+        }
+        &:nth-child(5){
+          left: 5px;
+          top: 13px;
+        }
+        &:nth-child(6){
+          left: calc(50% - 5px);
+          top: 13px;
+        }
+      }
+    }
+    @include lg-max{
+      display: block;
+    }
+  }
+}
+
+
+
+.menu{
+  width: 60%;
+  &__list{
+    @include flex();
+  }
+
+
+  &__link {
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      width: 0;
+      height: 1.8px;
+      background: #bd3025;
+      transition: .3s;
+      cursor: pointer;
+      @include md-max {
+        display: none;
+      }
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      width: 0;
+      height: 1.8px;
+      background: #bd3025;
+      transition: .3s;
+      cursor: pointer;
+      @include md-max {
+        display: none;
+      }
+    }
+  }
+  &__item {
+    &-dot{
+      .menu__link{
+        &:before {
+          width: 85%;
+          color: #000;
+        }
+        &:after {
+          width: 11px;
+          height: 11px;
+          border-radius: 50%;
+          top: 28px;
+          color: #000;
+        }
+      }
+    }
+  }
+
+  &__link{
+    color: #000;
+    font-size: 14px;
+    padding: 8px 8px;
+    //border-left: 2px solid #000;
+    //border-right: 2px solid #000;
+    font-weight: 600;
+    letter-spacing: 1px;
+    position: relative;
+    text-transform: uppercase;
+    cursor: pointer;
+    @include lg-max{
+      border-left: none;
+      border-right: none;
+    }
+    &-current{
+      &:before{
+        width: 85%;
+        color: #000;
+      }
+      &:after{
+        width: 11px;
+        height: 11px;
+        border-radius: 50%;
+        top: 28px;
+        color: #000;
+      }
+    }
+  }
+
+  @include lg-max{
+    display: none;
+    &.active {
+      display: block;
+      clear: both;
+      height: auto;
+      width: 100%;
+      position: fixed;
+      float: none;
+      top: 70px;
+      right: 0;
+      padding: 15px 20px;
+      z-index: 50;
+      background: #2259a5;
+      .menu {
+        &__list {
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: flex-start;
+        }
+        &__link {
+          display: flex;
+          color: #fff;
+          font-size: 20px;
+          margin: 14px 0;
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
+  @include respond(465){
+    &.active {
+      width: 100% !important;
+    }
+  }
+}
+

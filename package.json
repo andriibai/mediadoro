@@ -1,0 +1,29 @@
+{
+  "name": "mediadoro",
+  "version": "1.0.0",
+  "description": "Landing Page",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andriibai/mediadoro.git"
+  },
+  "author": "Andrii Bai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andriibai/mediadoro/issues"
+  },
+  "homepage": "https://github.com/andriibai/mediadoro#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-cache": "^1.1.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.2"
+  }
+}

@@ -1,0 +1,146 @@
+.contacts{
+  height: auto;
+  padding: 85px 0 40px 0;
+  background: #225ba5;
+  //background-image: linear-gradient(170deg,#225ca7,#070d13);
+  position: relative;
+  &__shape{
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .title{
+    color: #fff;
+  }
+  @include respond(767){
+    padding: 70px 0;
+  }
+  &:before{
+    content: '';
+    //background: url(../img/map.jpg) no-repeat;
+    //background-position: center;
+    //background-size: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  &__content{
+    @include flex();
+    position: relative;
+    height: auto;
+    @include lg-max{
+     flex-direction: column;
+     align-items: center;
+      height: auto;
+    }
+  }
+}
+
+.content-left{
+  //padding: 40px;
+  //margin: 0 auto 40px auto;
+  @include sm-max{
+    //padding: 30px 15px 30px 15px;
+    width: 320px;
+  }
+  &__title{
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: #fff;
+    letter-spacing: 3px;
+  }
+}
+.content-right{
+  //padding: 40px;
+  margin-bottom: 40px;
+  position: relative;
+  //background-image: linear-gradient(140deg,#2a4696,#1d6fb7);
+  @include lg-max{
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    height: auto;
+  }
+  @include sm-max{
+    //padding: 30px 15px 30px 15px;
+  }
+  &__title{
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #fff;
+    letter-spacing: 3px;
+  }
+  &__info{
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    @include sm-max{
+      flex-direction: column;
+    }
+    i{
+      color: #fff;
+      font-size: 35px;
+      margin-right: 20px;
+      @include xl-max{
+        font-size: 35px;
+      }
+    }
+    span{
+      color: #fff;
+      font-size: 24px;
+      font-weight: 400;
+      @include xl-max{
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.form{
+  position: relative;
+  @include flex();
+  flex-direction: column;
+  align-items: center;
+  &__input{
+    width: 426px;
+    height: 50px;
+    font-size: 15px;
+    padding: 14px 20px;
+    margin-bottom: 24px;
+    transition: all 0.25s;
+    &:hover{
+      transition: all 0.25s;
+    }
+    @include xl-max{
+      width: 346px;
+    }
+    @include sm-max{
+      width: 95%;
+    }
+  }
+  &__btn{
+    color: #000;
+    letter-spacing: 5px;
+    border: 1px solid #fff;
+    &:hover{
+      background: hsla(0,0%,100%,.2);
+      color: #fff;
+    }
+  }
+}
+
+#recaptcha-footer{
+  display: flex;
+  justify-content: center;
+  transform: scale(0.95);
+}
+
+
+.map{
+  margin-bottom: -4px;
+}
