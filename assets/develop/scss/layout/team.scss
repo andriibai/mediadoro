@@ -1,7 +1,7 @@
 .team{
   position: relative;
   padding: 85px 0 100px;
-
+  background: rgba(197, 197, 197, 0.25);
   &:before,
   &:after{
     position: absolute;
@@ -41,19 +41,20 @@
     //}
 
     img{
+      height: 345px;
       //margin: 0 auto;
     }
   }
 
   &__caption{
     position: absolute;
-    bottom: 0;
-    width: 100%;
+    bottom: 20px;
+    width: 85%;
     text-align: center;
     letter-spacing: 1px;
-    padding: 12px 8px 12px 40px;
+    padding: 12px 30px;
     background: $base-red;
-    border-top-left-radius: 100px;
+    border-top-right-radius: 50px;
     //border-top-right-radius: 15px;
   }
   &__name{

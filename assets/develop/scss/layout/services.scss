@@ -1,8 +1,26 @@
 .services{
-  //background: #fff;
-  background: url(../img/.png) no-repeat;
-  background-position: center;
-  background-size: cover;
+  padding: 90px 0 120px;
+  //background: #ececec;
+  //background: url(../img/dot-element.png) no-repeat;
+  //background-position: center;
+  //background-size: cover;
+  &:before,
+  &:after{
+    position: absolute;
+    content: url(../img/dot-element.png);
+    z-index: -1;
+  }
+  &:before{
+    top: 120px;
+    left: 50px;
+    transform: rotateZ(90deg);
+  }
+  &:after{
+    right: 50px;
+    bottom: 50px;
+    transform: rotateZ(0deg);
+  }
+
   &__content{
     @include flex();
     align-items: center;
@@ -47,7 +65,7 @@
     &:after {
       bottom: 0;
       right: 0;
-      border-width: 0 1px 1px 1px;
+      border-width: 0 4px 0 4px;
     }
 
     &.hover:before,

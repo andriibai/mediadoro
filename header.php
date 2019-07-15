@@ -24,7 +24,7 @@
         <div class="header__overlay"></div>
 
         <div class="header__logo">
-            <img src="assets/prod/img/logo-color.svg" alt="logo">
+            <img src="assets/prod/img/logo-white-h.svg" alt="logo">
         </div>
 
         <nav class="header__menu menu">

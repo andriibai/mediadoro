@@ -1,13 +1,14 @@
 .contacts{
   height: auto;
   padding: 85px 0 0 0;
-  background-image: linear-gradient(170deg,#c03225,rgb(114, 31, 31));
+  //background-image: linear-gradient(170deg,#c03225,rgb(114, 31, 31));
   position: relative;
   .title{
-    color: #fff;
+    //color: #fff;
+    margin-bottom: 70px;
     &:before,
     &:after{
-      background: #fff;
+      //background: #fff;
     }
   }
   @include respond(767){
@@ -15,7 +16,7 @@
   }
   &:before{
     content: '';
-    //background: url(../img/map.jpg) no-repeat;
+    background: url(../img/map.png) no-repeat;
     //background-position: center;
     //background-size: cover;
     position: absolute;
@@ -52,15 +53,15 @@
       align-items: center;
       justify-content: center;
       color: $base-red;
-      background: #fff;
-      font-size: 35px;
-      border: 1px solid #fff;
-      height: 80px;
-      width: 80px;
-      border-radius: 50%;
+      //background: $base-red;
+      font-size: 50px;
+      //border: 1px solid #fff;
+      //height: 80px;
+      //width: 80px;
+      //border-radius: 50%;
     }
     span{
-      color: #fff;
+      color: #000;
       font-size: 24px;
       font-weight: 400;
       text-align: center;

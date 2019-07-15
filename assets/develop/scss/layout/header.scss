@@ -5,9 +5,12 @@
     position: fixed;
     width: 100%;
     z-index: 5;
-    background: #fff;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.5);
+    //background: #fff;
     transition: background 0.5s ease-in-out, height 0.5s ease-in-out;
     &.js-fixed{
+      border-bottom: none;
+      background: linear-gradient(170deg,#c03225,rgb(114, 31, 31));
       box-shadow: 0 0 7px 1px rgba(0,0,0,0.36);
       .wrapper{
         height: 70px;
@@ -26,7 +29,7 @@
     }
     @include lg-max{
       box-shadow: 0 0 7px 1px rgba(0,0,0,.36);
-      background-image: linear-gradient(140deg,#225ca7,#122a42);
+      background: linear-gradient(170deg,#c03225,rgb(114, 31, 31));
     }
   }
 
@@ -144,7 +147,7 @@
       margin: 0 auto;
       width: 0;
       height: 1.8px;
-      background: #bd3025;
+      background: #fff;
       transition: .3s;
       cursor: pointer;
       @include md-max {
@@ -161,7 +164,7 @@
       margin: 0 auto;
       width: 0;
       height: 1.8px;
-      background: #bd3025;
+      background: #fff;
       transition: .3s;
       cursor: pointer;
       @include md-max {
@@ -174,21 +177,21 @@
       .menu__link{
         &:before {
           width: 85%;
-          color: #000;
+          color: #fff;
         }
         &:after {
           width: 16px;
           height: 7px;
           border-radius: 50%;
           top: 30px;
-          color: #000;
+          color: #fff;
         }
       }
     }
   }
 
   &__link{
-    color: #000;
+    color: #fff;
     font-size: 14px;
     padding: 8px 8px;
     //border-left: 2px solid #000;
@@ -205,14 +208,14 @@
     &-current{
       &:before{
         width: 85%;
-        color: #000;
+        color: #fff;
       }
       &:after{
         width: 16px;
         height: 7px;
         border-radius: 50%;
         top: 30px;
-        color: #000;
+        color: #fff;
       }
     }
   }
@@ -230,7 +233,7 @@
       right: 0;
       padding: 15px 20px;
       z-index: 50;
-      background: #2259a5;
+      background: $base-red;
       .menu {
         &__list {
           flex-direction: column;

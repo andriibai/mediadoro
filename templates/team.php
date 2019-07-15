@@ -32,8 +32,4 @@
 
         </div>
     </div>
-
-
-    <span class="team__rectangle-left"></span>
-    <span class="team__rectangle-right"></span>
 </section>

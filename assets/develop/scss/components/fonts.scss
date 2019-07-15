@@ -48,17 +48,17 @@
 }
 @font-face {
   font-family: 'Open Sans';
-  src: url('opensansbold.woff2') format('woff2'),
-  url('opensansbold.woff') format('woff'),
-  url('opensansbold.ttf') format('truetype');
+  src: url('../fonts/opensansbold.woff2') format('woff2'),
+  url('../fonts/opensansbold.woff') format('woff'),
+  url('../fonts/opensansbold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: 'Open Sans';
-  src: url('opensansbolditalic.woff2') format('woff2'),
-  url('opensansbolditalic.woff') format('woff'),
-  url('opensansbolditalic.ttf') format('truetype');
+  src: url('../fonts/opensansbolditalic.woff2') format('woff2'),
+  url('../fonts/opensansbolditalic.woff') format('woff'),
+  url('../fonts/opensansbolditalic.ttf') format('truetype');
   font-weight: 700;
   font-style: italic;
 }
