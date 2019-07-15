@@ -1,5 +1,24 @@
 .team{
+  position: relative;
   padding: 85px 0 100px;
+
+  &:before,
+  &:after{
+    position: absolute;
+    content: url(../img/dot-element.png);
+    z-index: -1;
+  }
+  &:before{
+    top: 120px;
+    left: 50px;
+    transform: rotateZ(90deg);
+  }
+  &:after{
+    right: 50px;
+    bottom: 50px;
+    transform: rotateZ(0deg);
+  }
+
   &__content{
     @include flex();
     align-items: center;
@@ -10,7 +29,8 @@
   &__info{
     //padding: 40px 42px;
     //background: #fff;
-    min-width: 310px;
+    //min-width: 310px;
+    position: relative;
     box-shadow: 1px 1px 20px 4px hsla(0,0%,46%,.14);
     margin-bottom: 20px;
     transition: .5s;
@@ -21,16 +41,20 @@
     //}
 
     img{
-      margin: 0 auto;
+      //margin: 0 auto;
     }
   }
 
   &__caption{
-    position: relative;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     text-align: center;
     letter-spacing: 1px;
-    padding: 17px 8px 25px;
-    background: #225ba5;
+    padding: 12px 8px 12px 40px;
+    background: $base-red;
+    border-top-left-radius: 100px;
+    //border-top-right-radius: 15px;
   }
   &__name{
     font-size: 18px;
@@ -43,16 +67,17 @@
       top: 0;
       left: 0;
       right: 0;
-      margin: 10px auto 0;
-      width: 30%;
-      height: 1.2px;
+      margin: 7px auto 0;
+      width: 10%;
+      height: 4.2px;
+      border-radius: 50%;
       background: $white;
     }
   }
   &__position{
     font-style: italic;
     font-size: 16px;
-    margin-top: 10px;
+    margin-top: 4px;
     color: $white;
   }
 

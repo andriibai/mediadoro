@@ -1,16 +1,14 @@
 .contacts{
   height: auto;
-  padding: 85px 0 40px 0;
-  background: #225ba5;
-  //background-image: linear-gradient(170deg,#225ca7,#070d13);
+  padding: 85px 0 0 0;
+  background-image: linear-gradient(170deg,#c03225,rgb(114, 31, 31));
   position: relative;
-  &__shape{
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
   .title{
     color: #fff;
+    &:before,
+    &:after{
+      background: #fff;
+    }
   }
   @include respond(767){
     padding: 70px 0;
@@ -29,90 +27,79 @@
   }
 
   &__content{
-    @include flex();
     position: relative;
     height: auto;
     @include lg-max{
-     flex-direction: column;
-     align-items: center;
-      height: auto;
     }
   }
-}
 
-.content-left{
-  //padding: 40px;
-  //margin: 0 auto 40px auto;
-  @include sm-max{
-    //padding: 30px 15px 30px 15px;
-    width: 320px;
+  &__info-top{
+    @include flex();
+    margin-bottom: 40px;
+
   }
-  &__title{
-    text-align: center;
-    font-size: 24px;
-    margin-bottom: 30px;
-    color: #fff;
-    letter-spacing: 3px;
-  }
-}
-.content-right{
-  //padding: 40px;
-  margin-bottom: 40px;
-  position: relative;
-  //background-image: linear-gradient(140deg,#2a4696,#1d6fb7);
-  @include lg-max{
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    height: auto;
-  }
-  @include sm-max{
-    //padding: 30px 15px 30px 15px;
-  }
-  &__title{
-    text-align: center;
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #fff;
-    letter-spacing: 3px;
-  }
-  &__info{
+
+  &__box{
     display: flex;
+    flex-direction: column;
     align-items: center;
-    margin-bottom: 30px;
+    width: 320px;
     @include sm-max{
       flex-direction: column;
     }
     i{
-      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $base-red;
+      background: #fff;
       font-size: 35px;
-      margin-right: 20px;
-      @include xl-max{
-        font-size: 35px;
-      }
+      border: 1px solid #fff;
+      height: 80px;
+      width: 80px;
+      border-radius: 50%;
     }
     span{
       color: #fff;
       font-size: 24px;
       font-weight: 400;
+      text-align: center;
+      margin-top: 20px;
       @include xl-max{
         font-size: 20px;
       }
     }
   }
+
+  &__info-bottom{
+    display: flex;
+    align-items: center;
+    .wrapper{
+    }
+    background: #fff;
+  }
+
+  &__map{
+    width: 100%;
+  }
 }
 
+
 .form{
-  position: relative;
-  @include flex();
+  display: flex;
   flex-direction: column;
   align-items: center;
   &__input{
     width: 426px;
     height: 50px;
     font-size: 15px;
-    padding: 14px 20px;
+    padding: 14px 20px 14px 0;
     margin-bottom: 24px;
     transition: all 0.25s;
+
+    border-color: $base-red;
+    border-width: 0 0 1px 0;
+    border-style: none none solid none;
     &:hover{
       transition: all 0.25s;
     }
@@ -124,23 +111,22 @@
     }
   }
   &__btn{
-    color: #000;
+    color: #fff;
     letter-spacing: 5px;
-    border: 1px solid #fff;
+    background: $base-red;
+    border: 1px solid $base-red;
     &:hover{
-      background: hsla(0,0%,100%,.2);
-      color: #fff;
+      background: #fff;
+      color: #000;
     }
   }
 }
 
-#recaptcha-footer{
+
+
+
+#recaptcha{
   display: flex;
   justify-content: center;
   transform: scale(0.95);
-}
-
-
-.map{
-  margin-bottom: -4px;
 }
