@@ -5,6 +5,10 @@
             <path d="M1920,0c-82.8,0-108.8,44.4-192,44.4c-78.8,0-116.5-43.7-192-43.7c-77.1,0-115.9,44.4-192,44.4c-78.2,0-114.6-44.4-192-44.4c-78.4,0-115.3,44.4-192,44.4C883.1,45,841,0.6,768,0.6C691,0.6,652.8,45,576,45C502.4,45,461.9,0.6,385,0.6C306.5,0.6,267.9,45,191,45C115.1,45,78,0.6,0,0.6V45h1920V0z"></path>
         </svg>
     </div>
+
+    <div class="circle-bg"></div>
+    <div class="circle-bg-2"></div>
+
     <div class="wrapper">
         <h2 class="title">Contact Us</h2>
         <div class="contacts__content">
@@ -27,6 +31,7 @@
 
     <div class="contacts__info-bottom">
         <div class="wrapper">
+            <div class="title-form">Get in touch</div>
             <form id="form" class="form" method="post">
                 <input type="text" name="name" id="name" class="form__input" placeholder="Name">
                 <input type="email" name="email" id="email" class="form__input" placeholder="E-mail">

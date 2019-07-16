@@ -1,5 +1,7 @@
 .about{
+  height: 100vh;
   padding: 0;
+  position: relative;
   .wrapper {
     padding: 245px 0 200px;
     @include lg-max{
@@ -7,6 +9,7 @@
     }
   }
   &__content{
+    height: 100vh;
     background-image: linear-gradient(170deg,#c03225,rgba(0, 0, 0, 0.75));
     //background-image: linear-gradient(170deg,#c03225,rgb(114, 31, 31));
     //background: $dark-blue;
@@ -15,6 +18,7 @@
       background: url("../img/background-about.jpg") no-repeat;
       background-position: 50%;
       background-size: cover;
+      background-attachment: fixed;
       position: absolute;
       left: 0;
       top: 0;
@@ -28,6 +32,7 @@
     margin: 0 auto;
     text-align: center;
     position: relative;
+    padding-bottom: 160px;
     h1 {
       color: $white;
       font-size: 40px;
@@ -122,5 +127,58 @@
     background: rgba(255,255,255,.2);
     border-radius: 20%;
     transform: rotate(45deg);
+  }
+}
+
+
+
+
+.button__down{
+  position: relative;
+  text-align: center;
+
+  a{
+    padding-top: 60px;
+    span{
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 30px;
+      height: 50px;
+      margin-left: -15px;
+      border: 2px solid #fff;
+      border-radius: 50px;
+      box-sizing: border-box;
+      &:before{
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        content: '';
+        width: 6px;
+        height: 6px;
+        margin-left: -3px;
+        background-color: #fff;
+        border-radius: 100%;
+        animation: up-down 2s infinite;
+        box-sizing: border-box;
+      }
+    }
+  }
+}
+
+@keyframes up-down {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    transform: translate(0, 20px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
   }
 }

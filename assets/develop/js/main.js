@@ -106,4 +106,20 @@ $(document).ready(function() {
         $('html, body').animate({scrollTop:0}, '300');
     });
 
+
+    /*=========================BUTTONS DOWN==============================*/
+    var btnContact = $('.about__btn-contact');
+    btnContact.click(function() {
+        $('html,body').animate({
+                scrollTop: $("#contacts").offset().top},
+            'slow');
+    });
+
+    var btnDown = $('.button__down');
+    btnDown.click(function() {
+        $('html,body').animate({
+                scrollTop: $("#services").offset().top},
+            'slow');
+    });
+
 });

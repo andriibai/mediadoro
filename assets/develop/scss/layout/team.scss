@@ -33,15 +33,19 @@
     position: relative;
     box-shadow: 1px 1px 20px 4px hsla(0,0%,46%,.14);
     margin-bottom: 20px;
+    border-radius: 15px;
     transition: .5s;
     &:hover{
-
+      .team__caption{
+        width: 100%;
+      }
     }
     //@include lg-max{
     //}
 
     img{
       height: 345px;
+      border-radius: 15px;
       //margin: 0 auto;
     }
   }
@@ -53,10 +57,12 @@
     text-align: center;
     letter-spacing: 1px;
     padding: 12px 30px;
-    background: $base-red;
+    background: linear-gradient(170deg,#c03225,rgba(114, 31, 31, 0.60));
     border-top-right-radius: 50px;
+    transition: .33s all ease;
     //border-top-right-radius: 15px;
   }
+
   &__name{
     font-size: 18px;
     font-weight: 700;
