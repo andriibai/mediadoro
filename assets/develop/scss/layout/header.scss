@@ -4,10 +4,12 @@
     top: 0;
     position: fixed;
     width: 100%;
-    z-index: 5;
+    z-index: 10;
     border-bottom: 0.5px solid rgba(255, 255, 255, 0.5);
-    //background: #fff;
     transition: background 0.5s ease-in-out, height 0.5s ease-in-out;
+    @include lg-max{
+      border-bottom: none;
+    }
     &.js-fixed{
       border-bottom: none;
       background: linear-gradient(170deg,#c03225,rgb(114, 31, 31));

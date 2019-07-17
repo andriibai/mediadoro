@@ -10,9 +10,9 @@
     &:after{
       //background: #fff;
     }
-  }
-  @include respond(767){
-    padding: 70px 0;
+    @include respond(767){
+      margin-bottom: 40px;
+    }
   }
   &:before{
     content: '';
@@ -37,6 +37,10 @@
   &__info-top{
     @include flex();
     margin-bottom: 40px;
+    @include respond(767){
+      flex-direction: column;
+      align-items: center;
+    }
 
   }
 
@@ -47,6 +51,10 @@
     width: 320px;
     @include sm-max{
       flex-direction: column;
+      max-width: 290px;
+    }
+    @include respond(767){
+      margin-top: 25px;
     }
     i{
       display: flex;
@@ -77,6 +85,9 @@
     align-items: center;
     position: relative;
     z-index: 5;
+    @include respond(767){
+      flex-direction: column;
+    }
     .wrapper{
     }
     background: #fff;
@@ -85,6 +96,10 @@
   &__map{
     width: 80%;
     font-size: 0;
+    @include respond(767){
+      width: 100%;
+      margin-top: 40px;
+    }
   }
 
 
@@ -148,7 +163,7 @@
       width: 346px;
     }
     @include sm-max{
-      width: 95%;
+      width: 250px;
     }
   }
   &__btn{

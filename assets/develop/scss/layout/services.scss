@@ -64,7 +64,7 @@
     //}
     &:after {
       bottom: 0;
-      right: 0;
+      right: -4px;
       border-width: 0 4px 0 4px;
     }
 
@@ -86,8 +86,14 @@
     }
 
     @include xl-max{
-      max-width: 400px;
+      max-width: 290px;
       padding: 30px;
+    }
+    @include lg-max{
+      max-width: 400px;
+    }
+    @include xs-max{
+      padding: 30px 20px;
     }
 
   }

@@ -2,10 +2,13 @@
   height: 100vh;
   padding: 0;
   position: relative;
+  @include respond(767){
+    height: auto;
+  }
   .wrapper {
     padding: 245px 0 200px;
-    @include lg-max{
-      padding: 200px 0 150px;
+    @include sm-max{
+      padding: 135px 0 95px;
     }
   }
   &__content{
@@ -13,6 +16,9 @@
     background-image: linear-gradient(170deg,#c03225,rgba(0, 0, 0, 0.75));
     //background-image: linear-gradient(170deg,#c03225,rgb(114, 31, 31));
     //background: $dark-blue;
+    @include respond(767){
+      height: auto;
+    }
     &:before{
       content: "";
       background: url("../img/background-about.jpg") no-repeat;
@@ -33,6 +39,11 @@
     text-align: center;
     position: relative;
     padding-bottom: 160px;
+    @include sm-max{
+      width: 87%;
+      padding-bottom: 40px;
+
+    }
     h1 {
       color: $white;
       font-size: 40px;
