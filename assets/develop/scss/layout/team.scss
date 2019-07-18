@@ -6,7 +6,7 @@
   &:after{
     position: absolute;
     content: url(../img/dot-element.png);
-    z-index: -1;
+    z-index: 0;
   }
   &:before{
     top: 120px;
@@ -18,76 +18,41 @@
     bottom: 50px;
     transform: rotateZ(0deg);
   }
-
   &__content{
     @include flex();
     align-items: center;
+    position: relative;
+    z-index: 2;
     @include lg-max{
       flex-direction: column;
     }
   }
-  &__info{
-    //padding: 40px 42px;
-    //background: #fff;
-    //min-width: 310px;
-    position: relative;
-    box-shadow: 1px 1px 20px 4px hsla(0,0%,46%,.14);
-    margin-bottom: 20px;
+  &__img{
+    height: 100%;
+    width: 50%;
     border-radius: 15px;
-    transition: .5s;
-    &:hover{
-      .team__caption{
-        width: 100%;
-      }
-    }
-    //@include lg-max{
-    //}
-
-    img{
-      height: 345px;
-      border-radius: 15px;
-      //margin: 0 auto;
-    }
-  }
-
-  &__caption{
-    position: absolute;
-    bottom: 20px;
-    width: 85%;
-    text-align: center;
-    letter-spacing: 1px;
-    padding: 12px 30px;
-    background: linear-gradient(170deg,#c03225,rgba(114, 31, 31, 0.60));
-    border-top-right-radius: 50px;
-    transition: .33s all ease;
-    //border-top-right-radius: 15px;
-  }
-
-  &__name{
-    font-size: 18px;
-    font-weight: 700;
-    color: $white;
-    &:after{
-      content: "";
-      position: relative;
-      display: block;
+    position: relative;
+    top: 40px;
+    box-shadow: 0 8px 54px 0 rgba(32,32,32,.11);
+    @include lg-max{
+      width: 90%;
       top: 0;
-      left: 0;
-      right: 0;
-      margin: 7px auto 0;
-      width: 10%;
-      height: 4.2px;
-      border-radius: 50%;
-      background: $white;
     }
   }
-  &__position{
-    font-style: italic;
-    font-size: 16px;
-    margin-top: 4px;
-    color: $white;
+  &__info{
+    width: 50%;
+    padding: 40px 42px;
+    background: #fff;
+    border-top: 3px solid #bd3025;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    box-shadow: 0px 8px 54px 0 rgba(32, 32, 32, 0.11);
+    @include lg-max{
+      width: 100%;
+    }
   }
-
   &__title{
     font-size: 24px;
     margin-bottom: 20px;
@@ -96,28 +61,56 @@
     font-size: 18px;
     line-height: 27px;
     margin-bottom: 20px;
-    color: #7e7e7e;
+    color: #353535;
   }
 
 
-  &__rectangle-right{
-    position: absolute;
-    width: 60%;
-    height: 150px;
-    background: url(../img/worn-dots.png);
-    background-size: auto;
-    z-index: -1;
-    right: 0;
-    bottom: 16%;
+  .circle-bg{
+    &:before{
+      top: 20%;
+      right: 30%;
+      opacity: 1;
+      width: 120px;
+      height: 120px;
+      background: hsl(5, 67%, 45%);
+      border-radius: 20%;
+      transform: rotate(45deg);
+      z-index: 0;
+    }
+    &:after{
+      top: 40%;
+      left: 30%;
+      opacity: 1;
+      width: 200px;
+      height: 200px;
+      background: hsl(5, 67%, 45%);
+      border-radius: 20%;
+      transform: rotate(45deg);
+      z-index: 0;
+    }
   }
-  &__rectangle-left{
-    position: absolute;
-    width: 60%;
-    height: 246px;
-    background: url(../img/worn-dots.png);
-    background-size: auto;
-    z-index: -1;
-    left: 0;
-    bottom: 40%;
+  .circle-bg-2{
+    &:before{
+      top: 20%;
+      left: 2%;
+      opacity: 1;
+      width: 100px;
+      height: 100px;
+      background: hsl(5, 67%, 45%);
+      border-radius: 20%;
+      transform: rotate(45deg);
+      z-index: 0;
+    }
+    &:after{
+      bottom: 10%;
+      right: 2%;
+      opacity: 1;
+      width: 150px;
+      height: 150px;
+      background: hsl(5, 67%, 45%);
+      border-radius: 20%;
+      transform: rotate(45deg);
+      z-index: 0;
+    }
   }
 }
