@@ -171,6 +171,7 @@
     letter-spacing: 5px;
     background: #fff;
     border: 1px solid $base-red;
+    margin-top: 15px;
     &:hover{
       background: #000;
       color: #fff;
@@ -186,7 +187,7 @@
   margin-bottom: 10px;
 }
 
-#recaptcha{
+.g-recaptcha{
   display: flex;
   justify-content: center;
   transform: scale(0.95);
