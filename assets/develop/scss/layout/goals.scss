@@ -7,6 +7,12 @@
   overflow: hidden;
   background-position: center;
   background-repeat: no-repeat;
+  @include md-max{
+    background-attachment: unset;
+  }
+  @include sm-max{
+    background-attachment: fixed;
+  }
   &:before{
     content: '';
     position: absolute;

@@ -35,6 +35,10 @@
             <form id="form" class="form" method="post">
                 <input type="text" name="name" id="name" class="form__input" placeholder="Name">
                 <input type="email" name="email" id="email" class="form__input" placeholder="E-mail">
+                <?php
+                    echo Recaptcha::get_recaptcha_form_script();
+                    echo Recaptcha::get_recaptcha_form_block();
+                ?>
                 <button type="submit" class="form__btn btn">Send</button>
             </form>
         </div>
