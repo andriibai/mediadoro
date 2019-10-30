@@ -1,2 +1,2 @@
 # mediadoro
-landing page
+https://mediadoro.com/
